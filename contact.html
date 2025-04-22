@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kontak</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1f1d36, #3f3351);
+      color: #f8f9fa;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a2e;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand i {
+      color: #ffcae3;
+      font-size: 1.6rem;
+      margin-right: 8px;
+    }
+
+    .navbar-brand span {
+      background: linear-gradient(45deg, #ffcae3, #ba68c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffeef8 !important;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #ff69b4;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    .contact-section {
+      padding: 60px 15px;
+    }
+
+    .contact-info {
+      margin-bottom: 30px;
+    }
+
+    .contact-info i {
+      font-size: 1.5rem;
+      margin-right: 10px;
+      color: #ff69b4;
+    }
+
+    .form-control, .btn {
+      border-radius: 30px;
+    }
+
+    .form-control {
+      padding: 0.75rem 1.2rem;
+      font-size: 1rem;
+    }
+
+    .btn-primary {
+      background-color: #9b59b6;
+      border: none;
+      padding: 0.6rem 1.4rem;
+      font-weight: 500;
+      transition: 0.3s ease;
+    }
+
+    .btn-primary:hover {
+      background-color: #e754a3;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    footer i {
+      margin: 0 10px;
+      color: #f8bbd0;
+    }
+
+    footer i:hover {
+      color: #fff;
+    }
+
+    /* Toast Custom */
+    #toast-notif {
+      position: fixed;
+      top: 30px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 1055;
+      background-color: #ff69b4;
+      color: #fff;
+      padding: 15px 25px;
+      border-radius: 30px;
+      box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+      display: none;
+      align-items: center;
+      gap: 10px;
+      font-weight: 500;
+      animation: slideDown 0.6s ease forwards;
+    }
+
+    @keyframes slideDown {
+      0% {
+        opacity: 0;
+        transform: translate(-50%, -30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translate(-50%, 0);
+      }
+    }
+
+    #toast-notif i {
+      font-size: 1.3rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-person-heart"></i>
+      <span>yit'smeCitra</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Contact Section -->
+<section class="contact-section container">
+  <h2 class="section-title">Contact Me</h2>
+  <div class="row">
+    <!-- Info Kontak -->
+    <div class="col-md-5">
+      <div class="contact-info mb-4">
+        <i class="bi bi-geo-alt-fill"></i> Pringsewu, Lampung
+      </div>
+      <div class="contact-info mb-4">
+        <i class="bi bi-envelope-fill"></i> citrafardiani@gmail.com
+      </div>
+      <div class="contact-info mb-4">
+        <i class="bi bi-telephone-fill"></i> +62 877-5037-1210
+      </div>
+      <div class="contact-info">
+        <i class="bi bi-instagram"></i> @ctrfrdni
+      </div>
+    </div>
+
+    <!-- Form Kontak -->
+    <div class="col-md-7">
+      <form id="contactForm">
+        <div class="mb-3">
+          <input type="text" class="form-control" placeholder="Nama Lengkap" required>
+        </div>
+        <div class="mb-3">
+          <input type="email" class="form-control" placeholder="Email Aktif" required>
+        </div>
+        <div class="mb-3">
+          <textarea class="form-control" rows="5" placeholder="Tulis pesanmu di sini..." required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Kirim Pesan</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- Custom Toast -->
+<div id="toast-notif">
+  <i class="bi bi-check-circle-fill"></i>
+  Pesanmu udah dikirim, makasih ya!
+</div>
+
+<!-- Footer -->
+<footer>
+  <p>© 2025 Citra Fardiani | All rights reserved</p>
+  <div>
+    <a href="https://instagram.com/ctrfrdni" target="_blank"><i class="bi bi-instagram fs-4 me-3 text-white"></i></a>
+    <a href="https://github.com/citrafardiani-24" target="_blank"><i class="bi bi-github fs-4 me-3 text-white"></i></a>
+    <a href="https://linkedin.com/in/citra-fardiani" target="_blank"><i class="bi bi-linkedin fs-4 text-white"></i></a>
+  </div>
+</footer>
+
+<!-- Script -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+  const form = document.getElementById("contactForm");
+  const toast = document.getElementById("toast-notif");
+
+  form.addEventListener("submit", function (e) {
+    e.preventDefault();
+    toast.style.display = "flex";
+
+    setTimeout(() => {
+      toast.style.display = "none";
+      form.reset();
+    }, 3000);
+  });
+</script>
+
+</body>
+</html>

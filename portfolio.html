@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portofolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1e1e2f, #2c2c54);
+      color: #fff;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a2e;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand i {
+      color: #ffcae3;
+      font-size: 1.6rem;
+      margin-right: 8px;
+    }
+
+    .navbar-brand span {
+      background: linear-gradient(45deg, #ffcae3, #ba68c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffeef8 !important;
+    }
+
+    .section-title {
+      font-size: 3rem;
+      font-weight: 600;
+      margin-bottom: 40px;
+      color: #ff69b4;
+      text-align: center;
+    }
+
+    .portfolio-section {
+      padding: 80px 0;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 20px;
+      backdrop-filter: blur(10px);
+      color: white;
+      transition: transform 0.3s ease;
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+    }
+
+    .card-img-top {
+      border-radius: 20px 20px 0 0;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .card-title {
+      color: #ffc0cb;
+    }
+
+    .btn-view {
+      background-color: #9b59b6;
+      color: white;
+      border-radius: 30px;
+      padding: 8px 20px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+      display: inline-block;
+      margin-top: 10px;
+    }
+
+    .btn-view:hover {
+      background-color: #be5bd2;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    footer i {
+      margin: 0 10px;
+      color: #f8bbd0;
+    }
+
+    footer i:hover {
+      color: #fff;
+    }
+
+    .video-iframe {
+      border-radius: 20px 20px 0 0;
+      width: 100%;
+      height: 200px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-person-heart"></i>
+      <span>yit'smeCitra</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Portfolio Section -->
+  <section class="portfolio-section container">
+    <h2 class="section-title">Latest project</h2>
+    <div class="row g-4">
+      <!-- Project 1: Video -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <iframe src="https://www.youtube.com/embed/sv-czI7AHgc" class="video-iframe" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+          <div class="card-body">
+            <h5 class="card-title">Inner. Corp</h5>
+            <p class="card-text">Aplikasi Inner dari ABC Corporation menyediakan platform aman untuk berbagi pengalaman dan mendapatkan dukungan bagi orang dengan masalah kesehatan mental dan korban bullying.</p>
+            <a href="https://youtu.be/sv-czI7AHgc" class="btn-view" target="_blank">
+              <i class="bi bi-play-btn"></i> Tonton Video
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 2: Game GitHub -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="spaceinvaders.jpeg" class="card-img-top" alt="Preview Game Space Invaders">
+          <div class="card-body">
+            <h5 class="card-title">Space Invaders Game</h5>
+            <p class="card-text">Game klasik Space Invaders dibuat menggunakan HTML, CSS, dan JavaScript. Tantangannya adalah menembak alien sebelum mereka mencapai bumi!</p>
+            <a href="https://github.com/ZidanAt0/SpaceInvaders" class="btn-view" target="_blank">
+              <i class="bi bi-github"></i> Lihat di GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Project 3: Wisatopia -->
+      <div class="col-md-4">
+        <div class="card shadow-sm h-100">
+          <img src="wisatopia.png" class="card-img-top" alt="Preview Wisatopia Website">
+          <div class="card-body">
+            <h5 class="card-title">Website Wisatopia</h5>
+            <p class="card-text">Sebuah platform informasi pariwisata Indonesia yang mempermudah pengguna dalam menjelajah destinasi populer dan tersembunyi.</p>
+            <a href="https://github.com/wahyuwsap/wisatopia" class="btn-view" target="_blank">
+              <i class="bi bi-github"></i> Lihat di GitHub
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Citra Fardiani | All rights reserved</p>
+    <div>
+      <a href="https://instagram.com/ctrfrdni" target="_blank"><i class="bi bi-instagram fs-4 me-3 text-white"></i></a>
+      <a href="https://github.com/citrafardiani-24" target="_blank"><i class="bi bi-github fs-4 me-3 text-white"></i></a>
+      <a href="https://linkedin.com/in/citra-fardiani" target="_blank"><i class="bi bi-linkedin fs-4 text-white"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

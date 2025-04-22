@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Resume</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css"/>
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: linear-gradient(to right, #1f1d36, #3f3351);
+      color: #f8f9fa;
+      margin: 0;
+    }
+
+    /* Navbar */
+    .navbar {
+      background-color: #1a1a2e;
+    }
+
+    .navbar-brand {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      font-size: 1.6rem;
+      transition: transform 0.3s ease;
+    }
+
+    .navbar-brand i {
+      color: #ffcae3;
+      font-size: 1.6rem;
+      margin-right: 8px;
+    }
+
+    .navbar-brand span {
+      background: linear-gradient(45deg, #ffcae3, #ba68c8);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .navbar-brand:hover {
+      transform: scale(1.05);
+    }
+
+    .nav-link {
+      color: #fff !important;
+      font-weight: 500;
+    }
+
+    .nav-link:hover {
+      color: #ffeef8 !important;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2.8rem;
+      font-weight: 600;
+      color: #ff69b4;
+      margin-top: 60px;
+      margin-bottom: 40px;
+    }
+
+    .resume-section {
+      padding: 60px 15px;
+    }
+
+    .timeline {
+        position: relative;
+        padding-left: 40px;
+        border-left: 4px solid #ff69b4;
+    }
+
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        width: 18px;
+        height: 18px;
+        background: #fff;
+        border: 4px solid #ff69b4;
+        border-radius: 50%;
+    }
+
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 30px; /* Tambahkan padding kiri supaya teks geser dari dot */
+    }
+
+    .timeline-item::before {
+      content: '';
+      position: absolute;
+      left: -13px;
+      top: 5px;
+      width: 18px;
+      height: 18px;
+      background: #fff;
+      border: 4px solid #ff69b4;
+      border-radius: 50%;
+    }
+
+    .timeline-item h5 {
+      font-weight: 600;
+      margin-bottom: 5px;
+      color: #ffc0cb;
+    }
+
+    .timeline-item small {
+      display: block;
+      margin-bottom: 10px;
+      color: #ccc;
+      font-size: 0.9rem;
+    }
+
+    .timeline-item p {
+      color: #e0e0e0;
+      margin: 0;
+    }
+
+    /* Footer */
+    footer {
+      background: #1a1a2e;
+      color: #fff;
+      text-align: center;
+      padding: 25px 0;
+    }
+
+    footer i {
+      margin: 0 10px;
+      color: #f8bbd0;
+    }
+
+    footer i:hover {
+      color: #fff;
+    }
+
+    @media (min-width: 768px) {
+      .timeline-col {
+        padding: 0 40px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark shadow-sm sticky-top">
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <i class="bi bi-person-heart"></i>
+      <span>yit'smeCitra</span>
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item"><a class="nav-link active" href="index.html">Beranda</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="portfolio.html">Portofolio</a></li>
+        <li class="nav-item"><a class="nav-link" href="resume.html">Resume</a></li>
+        <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  <!-- Resume Section -->
+  <section class="resume-section container">
+    <h2 class="section-title">Resume</h2>
+    <div class="row">
+      <!-- Pendidikan -->
+      <div class="col-md-6 timeline-col">
+        <h4 class="mb-4"><i class="bi bi-mortarboard-fill me-2 text-pink"></i>Pendidikan</h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h5>Universitas Lampung</h5>
+            <small>2023 - Sekarang</small>
+            <p>Ilmu Komputer. Aktif dalam organisasi kemahasiswaan dan mengerjakan proyek web.</p>
+          </div>
+          <div class="timeline-item">
+            <h5>SMAN 2 Pringsewu</h5>
+            <small>2020 - 2023</small>
+            <p>Jurusan IPA. Aktif di KIR dan menulis karya tulis ilmiah.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Pengalaman -->
+      <div class="col-md-6 timeline-col">
+        <h4 class="mb-4"><i class="bi bi-briefcase-fill me-2 text-pink"></i>Pengalaman</h4>
+        <div class="timeline">
+          <div class="timeline-item">
+            <h5>Himpunan Mahasiswa Ilmu Komputer</h5>
+            <small>2023 - 2024</small>
+            <p>Anggota badan Khusus.</p>
+          </div>
+          <div class="timeline-item">
+            <h5>Workshop Front-End Developer</h5>
+            <small>2024</small>
+            <p>Mempelajari pengembangan web menggunakan HTML, CSS, dan JavaScript.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 Citra Fardiani | All rights reserved</p>
+    <div>
+      <a href="https://instagram.com/ctrfrdni" target="_blank"><i class="bi bi-instagram fs-4 me-3 text-white"></i></a>
+      <a href="https://github.com/citrafardiani-24" target="_blank"><i class="bi bi-github fs-4 me-3 text-white"></i></a>
+      <a href="https://linkedin.com/in/citra-fardiani" target="_blank"><i class="bi bi-linkedin fs-4 text-white"></i></a>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
